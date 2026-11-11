@@ -1,0 +1,39 @@
+// Größen aus dem Mockup
+$image-size: 200px;
+$heart-size: 40px;
+
+// Ein Post: Name, Bild, Likes untereinander
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+
+  &__name {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  // Quadratischer Bildausschnitt wie im Mockup
+  &__image {
+    width: $image-size;
+    height: $image-size;
+    object-fit: cover;
+  }
+
+  // Herz und Zahl nebeneinander, Zahl unten bündig
+  &__likes {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+
+    > img {
+      width: $heart-size;
+      height: $heart-size;
+    }
+
+    > span {
+      font-size: 16px;
+    }
+  }
+}
